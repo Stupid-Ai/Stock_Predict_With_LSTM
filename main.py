@@ -58,7 +58,7 @@ class Data:
         # 日增涨率 为0时涨跌为0，日增长率 > 0 时涨跌为1 else 涨跌为-1
         init_data['涨跌'] = init_data['日增长率'].apply(lambda x: 0 if x == 0 else ( 1 if float(x) > 0 else -1))
         # 删除封闭期的数据
-        init_data = init_data.loc[init_data['申购状态']=='开放申购']
+        # init_data = init_data.loc[init_data['申购状态']=='开放申购']
         # 将‘上证涨跌’中可能处出现的空字符转换成空值
         init_data.loc[init_data['上证涨跌']=='','上证涨跌'] = np.nan
         # 删除存在空值的行
@@ -72,8 +72,8 @@ class Data:
         init_data.to_csv(self.cfig.clean_data_path ,encoding='gbk',index=False)
         stock_date = init_data['净值日期'][:self.cfig.time_step]
         stock_date_ = stock_date.str[5:].tolist()
-        stock_date = stock_date[::-1].tolist()
-        now_date = stock_date[-1]
+        stock_date_ = stock_date_[::-1]
+        now_date = stock_date[0]
         for i in range(self.cfig.predict_day):
             date = (datetime.strptime(now_date, "%Y-%m-%d") + timedelta(days=i+1)).strftime("%m-%d")
             stock_date_.append(date)

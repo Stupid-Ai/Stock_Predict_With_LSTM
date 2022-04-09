@@ -67,7 +67,7 @@ class Config:
     # 是否载入已有模型参数进行训练
     add_train = False  
     # 学习率
-    learning_rate = 0.01
+    learning_rate = 0.001
     # 整个训练集被训练多少遍，不考虑早停的情况下
     epoch = 20
     # 训练多少个epoch开始验证， = -1 不使用早停
