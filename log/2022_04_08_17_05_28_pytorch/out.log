@@ -1,0 +1,68 @@
+2022-04-08 17:05:29,980 - INFO - 
+Config:
+'add_train': False
+'batch_size': 64
+'clean_data_path': None
+'cur_time': '2022_04_08_17_05_28'
+'data_path': './data/'
+'do_continue_train': True
+'do_figure_save': True
+'do_log_print_to_screen': True
+'do_log_save_to_file': True
+'do_predict': True
+'do_train': True
+'do_train_visualized': False
+'dropout_rate': 0
+'epoch': 20
+'feature_columns': [1, 3, 6]
+'figure_save_path': './figure/'
+'frame': 'pytorch'
+'hidden_size': 64
+'input_size': 3
+'label_columns': [1]
+'learning_rate': 0.01
+'load_logger': <bound method Config.load_logger of <path_config.Config object at 0x0000020830F985B0>>
+'log_save_path': './log/2022_04_08_17_05_28_pytorch/'
+'lstm_layers': 1
+'mean': None
+'model_name': '_20220408.pth'
+'model_postfix': {'pytorch': '.pth'}
+'model_save_path': './checkpoint/'
+'out_size': 1
+'patience': 5
+'predict_day': 1
+'random_seed': 42
+'read_data_path': None
+'seq': None
+'shuffle_train_data': False
+'std': None
+'stock_date': None
+'stock_name': None
+'test_data': None
+'time_step': 30
+'train_data_rate': 0.95
+'train_loss_path': './train_loss'
+'url_path': './data/url.csv'
+'use_cuda': True
+'valid_ac_path': './valid_ac'
+'valid_data_rate': 0.15
+'valid_loss_path': './valid_loss'
+2022-04-08 17:05:43,029 - INFO - Epoch  1/20
+2022-04-08 17:05:43,495 - INFO - The train loss is 0.11813140384232004	The valid loss is 2.3484269976615906
+2022-04-08 17:05:54,972 - INFO - Epoch  2/20
+2022-04-08 17:05:55,178 - INFO - The train loss is 0.1749619904595117	The valid loss is 1.9533910751342773
+2022-04-08 17:05:55,183 - INFO - Epoch  3/20
+2022-04-08 17:05:55,371 - INFO - The train loss is 0.14408449577943733	The valid loss is 0.45717471539974214
+2022-04-08 17:05:55,375 - INFO - Epoch  4/20
+2022-04-08 17:05:55,563 - INFO - The train loss is 0.07564052494320397	The valid loss is 1.3040296256542205
+2022-04-08 17:05:55,565 - INFO - Epoch  5/20
+2022-04-08 17:05:55,761 - INFO - The train loss is 0.02493418929516338	The valid loss is 0.9142293035984039
+2022-04-08 17:05:55,762 - INFO - Epoch  6/20
+2022-04-08 17:05:55,952 - INFO - The train loss is 0.0021430017387804885	The valid loss is 0.9433743894100189
+2022-04-08 17:05:55,952 - INFO - Epoch  7/20
+2022-04-08 17:05:56,167 - INFO - The train loss is 0.0015496512666383448	The valid loss is 0.8942855924367905
+2022-04-08 17:05:56,168 - INFO - Epoch  8/20
+2022-04-08 17:05:56,369 - INFO - The train loss is 0.0016007385546496758	The valid loss is 0.8776660978794097
+2022-04-08 17:05:56,369 - INFO - The training stops early in epoch 7
+2022-04-08 17:06:10,120 - INFO - Accuracy: 51.69%
+2022-04-08 17:06:10,121 - INFO - The predicted stock trend is: ['down']

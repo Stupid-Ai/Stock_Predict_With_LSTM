@@ -1,0 +1,73 @@
+2022-04-08 16:56:30,988 - INFO - 
+Config:
+'add_train': False
+'batch_size': 64
+'clean_data_path': None
+'cur_time': '2022_04_08_16_56_29'
+'data_path': './data/'
+'do_continue_train': True
+'do_figure_save': True
+'do_log_print_to_screen': True
+'do_log_save_to_file': True
+'do_predict': True
+'do_train': True
+'do_train_visualized': False
+'dropout_rate': 0
+'epoch': 20
+'feature_columns': [1, 3, 6]
+'figure_save_path': './figure/'
+'frame': 'pytorch'
+'hidden_size': 64
+'input_size': 3
+'label_columns': [1]
+'learning_rate': 0.01
+'load_logger': <bound method Config.load_logger of <path_config.Config object at 0x000002B0A6EAA250>>
+'log_save_path': './log/2022_04_08_16_56_29_pytorch/'
+'lstm_layers': 1
+'mean': None
+'model_name': '_20220408.pth'
+'model_postfix': {'pytorch': '.pth'}
+'model_save_path': './checkpoint/'
+'out_size': 1
+'patience': 5
+'predict_day': 1
+'random_seed': 42
+'read_data_path': None
+'seq': None
+'shuffle_train_data': False
+'std': None
+'stock_date': None
+'stock_name': None
+'test_data': None
+'time_step': 30
+'train_data_rate': 0.95
+'train_loss_path': './train_loss'
+'url_path': './data/url.csv'
+'use_cuda': True
+'valid_ac_path': './valid_ac'
+'valid_data_rate': 0.15
+'valid_loss_path': './valid_loss'
+2022-04-08 16:56:37,084 - INFO - Epoch  1/20
+2022-04-08 16:56:37,447 - INFO - The train loss is 0.917171984910965	The valid loss is nan
+2022-04-08 16:56:37,447 - INFO - Epoch  2/20
+2022-04-08 16:56:37,478 - INFO - The train loss is 0.3242996260523796	The valid loss is nan
+2022-04-08 16:56:37,479 - INFO - Epoch  3/20
+2022-04-08 16:56:37,506 - INFO - The train loss is 0.048530795611441135	The valid loss is nan
+2022-04-08 16:56:37,507 - INFO - Epoch  4/20
+2022-04-08 16:56:37,532 - INFO - The train loss is 0.041470673866569996	The valid loss is nan
+2022-04-08 16:56:37,532 - INFO - Epoch  5/20
+2022-04-08 16:56:37,560 - INFO - The train loss is 0.03794794622808695	The valid loss is nan
+2022-04-08 16:56:37,561 - INFO - The training stops early in epoch 4
+2022-04-08 16:56:37,569 - ERROR - Run Error
+Traceback (most recent call last):
+  File "e:\StockCalculate\main.py", line 170, in main
+    pred_result, label_Y = predict(self.cfig, logger, test_X)
+  File "e:\StockCalculate\model\m_pytorch.py", line 180, in predict
+    model.load_state_dict(torch.load(config.model_save_path + config.frame+'_'+config.stock_name+'_' +config.model_name))
+  File "C:\python3.8\lib\site-packages\torch\serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "C:\python3.8\lib\site-packages\torch\serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "C:\python3.8\lib\site-packages\torch\serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './checkpoint/pytorch_广发制造业精选混合C__20220408.pth'
